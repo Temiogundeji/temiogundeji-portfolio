@@ -8,42 +8,53 @@ const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueO
 const last_posts = posts.slice(0, 3);
 ---
 
+
 <BaseLayout sideBarActiveItemID="home">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">I'm Manuel Ernesto</div>
-    <div class="text-3xl py-3 font-bold">Software Engineer and Entrepreneur</div>
-    <div class="py-2">
-      <text class="text-lg">
-        This is <b>Astrofy</b> a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS.
-        Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find
-        it useful!
-      </text>
+    <div class="text-5xl font-bold">I'm Yusuff Ogundeji</div>
+    <div class="text-3xl py-3 font-bold">Software Engineer</div>
+    <div class="py-5">
+      <text class="text-lg mb-32">
+       Dedicated and versatile software engineer with strong frontend expertise, having worked on projects across industries including e-commerce, fintech, and edtech, building applications and solutions for both small businesses and enterprise clients. Beyond coding, I engage in system design and comprehensive documentation.
+      </text><br/><br/> 
+      <text class="text-lg mt-3">I'm motivated to create user-centric products that satisfy business requirements while mentoring software engineering newbies. I excel at communicating complex technical concepts through simple, clear writing and strive to make an impact with every technical decision.</text>
     </div>
-    <div class="mt-8">
-      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
-      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
-        Get This template
-      </a>
+ <div class="flex flex-wrap gap-4 mt-8">
+        <span class="badge badge-primary bg-green-950  p-4">JavaScript</span>
+        <span class="badge badge-secondary bg-blue-700 p-4">TypeScript</span>
+        <span class="badge badge-accent p-4">React</span>
+        <span class="badge badge-info p-4">Node.js</span>
+        <span class="badge badge-success p-4">Next.js</span>
+        <span class="badge badge-warning p-4">GraphQL</span>
+        <span class="badge badge-error p-4">CSS</span>
+        <span class="badge badge-primary p-4">Python</span>
+        <span class="badge badge-info p-4">Docker</span>
+        <span class="badge badge-secondary p-4">Kubernetes</span>
+        <span class="badge badge-accent p-4">CircleCI</span>
+    </div>
+    </div>
+    <div class="-mt-2 mb-20">
+      <a class="btn" href="https://twitter.com/@_temiogundeji" target="_blank"> Let's connect!</a>
     </div>
   </div>
-
   <div>
-    <div class="text-3xl w-full font-bold mb-2">My last projects {"</>"}</div>
+    <div class="text-3xl w-full font-bold mb-2">Featured Projects </div>
   </div>
 
   <HorizontalCard
-    title="Demo Project 1"
+    title="CobbleScore (Now PebbleScore)"
     img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    desc="In Africa, over 70% of people do not have access to credit facilities, not because these facilities are non-existent, but because most people are not creditworthy. Our aim, hence, is to educate our users by helping them understand their credit reports and score. We help them build their credit scores over time and provide easier access to loans and other credit facilities at their beck and call."
+    my_part=""
     url="#"
-    badge="NEW"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
     title="Demo Project 2"
     img="/post_img.webp"
     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    my_part=""
     url="#"
   />
   <div class="divider my-0"></div>
@@ -51,6 +62,7 @@ const last_posts = posts.slice(0, 3);
     title="Demo Project 3"
     img="/post_img.webp"
     desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    my_part=""
     url="#"
     badge="FOSS"
   />
