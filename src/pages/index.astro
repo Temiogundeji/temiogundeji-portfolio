@@ -2,6 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
+import { projects } from "../data/projects.ts";
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -20,18 +21,18 @@ const last_posts = posts.slice(0, 3);
       </text><br/><br/> 
       <text class="text-lg mt-3">I'm motivated to create user-centric products that satisfy business requirements while mentoring software engineering newbies. I excel at communicating complex technical concepts through simple, clear writing and strive to make an impact with every technical decision.</text>
     </div>
- <div class="flex flex-wrap gap-4 mt-8">
-        <span class="badge badge-primary bg-green-950  p-4">JavaScript</span>
-        <span class="badge badge-secondary bg-blue-700 p-4">TypeScript</span>
-        <span class="badge badge-accent p-4">React</span>
-        <span class="badge badge-info p-4">Node.js</span>
-        <span class="badge badge-success p-4">Next.js</span>
-        <span class="badge badge-warning p-4">GraphQL</span>
-        <span class="badge badge-error p-4">CSS</span>
-        <span class="badge badge-primary p-4">Python</span>
-        <span class="badge badge-info p-4">Docker</span>
-        <span class="badge badge-secondary p-4">Kubernetes</span>
-        <span class="badge badge-accent p-4">CircleCI</span>
+    <div class="flex flex-wrap gap-4 mt-8">
+      <span class="badge badge-primary bg-green-950  p-4">JavaScript</span>
+      <span class="badge badge-secondary bg-blue-700 p-4">TypeScript</span>
+      <span class="badge badge-accent p-4">React</span>
+      <span class="badge badge-info p-4">Node.js</span>
+      <span class="badge badge-success p-4">Next.js</span>
+      <span class="badge badge-warning p-4">GraphQL</span>
+      <span class="badge badge-error p-4">CSS</span>
+      <span class="badge badge-primary p-4">Python</span>
+      <span class="badge badge-info p-4">Docker</span>
+      <span class="badge badge-secondary p-4">Kubernetes</span>
+      <span class="badge badge-accent p-4">CI/CD</span>
     </div>
     </div>
     <div class="-mt-2 mb-20">
@@ -41,32 +42,21 @@ const last_posts = posts.slice(0, 3);
   <div>
     <div class="text-3xl w-full font-bold mb-2">Featured Projects </div>
   </div>
-
-  <HorizontalCard
-    title="CobbleScore (Now PebbleScore)"
-    img="/post_img.webp"
-    desc="In Africa, over 70% of people do not have access to credit facilities, not because these facilities are non-existent, but because most people are not creditworthy. Our aim, hence, is to educate our users by helping them understand their credit reports and score. We help them build their credit scores over time and provide easier access to loans and other credit facilities at their beck and call."
-    my_part=""
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    my_part=""
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    my_part=""
-    url="#"
-    badge="FOSS"
-  />
-
+  {projects.map((project, index) => (
+    <>
+      <HorizontalCard
+        title={project.title}
+        img={project.image}
+        desc={project.description}
+        url={project.url}
+        badge={project.badge}
+        techStack={project.techStack}
+        contributions={project.contributions}
+      />
+      {index < projects.length - 1 && <div class="divider my-0" />}
+    </>
+  ))}
+  
   <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
   </div>

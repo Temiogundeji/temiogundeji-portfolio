@@ -1,43 +1,100 @@
 ---
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+const { title, img, desc, url, badge, tags, techStack = [], contributions = [], target = "_blank", show = false } = Astro.props;
 import { Image } from "astro:assets";
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
 
-<div
-  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
->
-  <a href={url} target={target}>
-    <div class="hero-content flex-col md:flex-row">
-      {
-        img && (
-          <Image
-            src={img}
-            width={750}
-            height={422}
-            format="webp"
-            alt={title}
-            class="max-w-full md:max-w-[13rem] rounded-lg"
-          />
-        )
-      }
-      <div class="grow w-full">
+<div class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]">
+  <div class="hero-content flex-col md:flex-row">
+    {img && (
+      <Image
+        src={img}
+        width={750}
+        height={422}
+        format="webp"
+        alt={title}
+        class="max-w-full md:max-w-[13rem] rounded-lg"
+      />
+    )}
+    <div class="grow w-full">
+      <div class="flex justify-between items-center">
         <h1 class="text-xl font-bold">
           {title}
           {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
         </h1>
-        <p class="py-1 text-1xl">{desc}</p>
-        <div class="card-actions justify-end">
-          {
-            tags &&
-              tags.map((tag) => (
-                <a href={`${tag_url}/${tag}`} class="badge badge-outline">
-                  {tag}
-                </a>
-              ))
-          }
-        </div>
+        <button class="toggle-details btn btn-sm btn-ghost" aria-label="Toggle details">
+          <span class="show-text">Show Details</span>
+          <span class="hide-text hidden">Hide Details</span>
+        </button>
+      </div>
+      
+      <p class="py-1 text-1xl">{desc}</p>
+
+      <div class="details-section hidden">
+        {contributions.length > 0 && (
+          <div class="py-2">
+            <p class="text-sm font-bold mb-2">My Contributions:</p>
+            <ul class="list-disc list-inside space-y-1 text-1xl ml-2">
+              {contributions.map((contribution) => (
+                <li>{contribution}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {techStack.length > 0 && (
+          <div class="py-2">
+            <p class="text-sm font-bold mb-1">Tech Stack:</p>
+            <div class="flex flex-wrap gap-2">
+              {techStack.map((tech) => (
+                <span class="badge badge-md">{tech}</span>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div class="card-actions justify-end mt-4">
+        <a href={url} target={target} class="btn btn-sm btn-primary">View Project</a>
+        {tags && tags.map((tag) => (
+          <a href={`${tag_url}/${tag}`} class="badge badge-outline">
+            {tag}
+          </a>
+        ))}
       </div>
     </div>
-  </a>
+  </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleButtons = document.querySelectorAll('.toggle-details');
+    
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const card = button.closest('.rounded-lg');
+        if (!card) return;
+        const detailsSection = card.querySelector('.details-section');
+        const showText = button.querySelector('.show-text');
+        const hideText = button.querySelector('.hide-text');
+
+        if (detailsSection) {
+          detailsSection.classList.toggle('hidden');
+        }
+        if (showText) {
+          showText.classList.toggle('hidden');
+        }
+        if (hideText) {
+          hideText.classList.toggle('hidden');
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .details-section {
+    transition: all 0.3s ease-in-out;
+  }
+</style>
