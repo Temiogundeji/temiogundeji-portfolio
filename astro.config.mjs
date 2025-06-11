@@ -6,5 +6,12 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://astrofy-template.netlify.app',
-  integrations: [mdx(), sitemap(), tailwind()]
+  integrations: [mdx(), sitemap(), tailwind()],
+  domains: ['cdn.hashnode.com', 'your-image-host.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.hashnode.dev',
+      },
+    ],
 });
