@@ -13,8 +13,8 @@ export const projects: Project[] = [
     {
         title: "Digital Marketplace for African Artisans",
         description: "Oosri is a digital marketplace designed to connect skilled African artisans, starting with Nigeria, to global buyers. Our platform breaks down the traditional barriers that have long kept local craftspeople, designers, and micro-entrepreneurs from accessing international markets. Through Oosri, artisans can showcase their unique, handcrafted products directly to global customers, while we handle the logistics, payments, quality assurance, and cross-border trade complexities. ",
-        image: "/post_img.webp",
-        url: "#",
+        image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1749662949/Oosri-website_seax8a.png",
+        url: "https://orrsi.vercel.app/",
         techStack: ["React", "Next.JS", "Laravel", "React JS", "TypeScript", "Styled Components"],
         contributions: [
       "Contributed to admin dashboard that allowed internal teams to manage products, track orders, and monitor platform activities seamlessly.",
@@ -28,7 +28,7 @@ export const projects: Project[] = [
     {
         title: "IleyaFest Event Platform",
         description: "A platform to enable people register for the IleyaFest event. They can register for the event, make a payment and generate a ticket for the event.  Prior to the implementation of this project IleyaFest was conducted by ensuring people transfer money directly into the indivdual account.",
-        image: "/post_img.webp",
+        image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1749663293/ileyafest_cfngow.png",
         url: "#",
         techStack: ["Next JS", "Prisma", "Supabase", "Paystack API", "React Query","React Hook Form"],
         contributions:["Initiated and led the development of the IleyaFest event website, taking the project from concept to launch by outlining goals, features, and user flows for a seamless attendee experience.",
@@ -40,8 +40,8 @@ export const projects: Project[] = [
     {
         title: "Kicest E-commerce Platform",
         description: "Kicest is an all-in-one e-commerce platform designed to help businesses of all sizes build, manage, and grow their online presence. With our platform, you can launch a customizable, mobile-friendly e-commerce website in minutes and seamlessly integrate social media to reach wider audiences, receive instant payments for orders into your local bank account, automate inventory management, order tracking, and shipping logistics.",
-        image: "/post_img.webp",
-        url: "https://example.com/portfolio",
+        image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1749664113/Kicest_Vendor_zm1pcn.png",
+        url: "https://web.kicest.com",
         // badge: "Web Design",
         tags: ["Web Design", "Portfolio", "Personal"],
         techStack: ["Tailwind CSS", "NodeJS", "Typescript", "Next JS", "Go"],
@@ -76,21 +76,43 @@ export const projects: Project[] = [
         // badge: "Web Design",
         techStack: ["Vue JS", "Electron", "Tailwind CSS", "Typescript", "NodeJS", "Supabase", "Prisma"],
         contributions: [
-            "Setup Frontend and Backend repository on GitHub and managed the project roadmap with GitHub Project.",,
+            "Setup Frontend and Backend repository on GitHub and managed the project roadmap with GitHub Project.",
             "Prepared Architectural design document",
             "Prepared Project requirement document",
             "Prepared Technical decision document",
             "Set up the frontend and backend repository on GitHub and managed the project roadmap with GitHub Project. "
         ],
     },
-     {
-        title: "Portfolio Website",
-        description: "A personal portfolio website to showcase projects and skills.",
-        image: "",
-        techStack: ["HTML", "CSS", "JavaScript"],
-        contributions: [],
-        url: "https://example.com/portfolio",
+    {
+        title: "Pebblescore(Formerly Pebblescore)",
+        description:"Cobblescore helps loan providers recover debt by enabling flexible repayment plans for debtors. Its mobile app supports users in boosting their credit scores through structured debt repayment and a credit booster feature.The platform partners with major Nigerian credit bureaus: Credit Registry, CRC, and FirstCentral, to report credit activity and support score recovery.",
+         image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1749664585/Pebblescore_tkwagj.png",
+        techStack:["React", "React Native", "NodeJS", "Express", "MongoDB", "Typescript", "Tailwind CSS"],
+        contributions: [
+            "Built the Frontend of the debtor's portal that allows over 1000+ debtors to pay back their debts with various lenders through a platform.",
+            "Built a feature  to allow lenders to invite their debtors.",
+            "Integrated Google Analytics across all our platforms.",
+            "Implemented Tawk.to through which customers can engage with the company.",
+            "Contributed to the development of a lender's portal (A platform through which 5 major Nigerian lenders use to manage their debtors) and debt repayment.",
+            "Implemented scheduled jobs for different cases to engage users.",
+            "Documented API for the Lenders and Debtors portal.",
+            "Built a blog for the company for customer engagement through content."
+        ],
+        url: "https://web.archive.org/web/20230203214704/https://pebblescore.com/",
+    },
+    {
+        title: "Friconn - Chegg for Africa Students.",
+        description: "Friconn is an Education Technology company that helps people optimize their learning process to reach their learning goals easily by providing valuable technological tools and services that will shape and educate them to create the future of Africa. We are a learning companion for African students.",
+        image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1749664407/Friconn_w8tosh.png",
+        techStack: ["CodeIgniter", "MYSQL", "React", "Tailwind CSS"],
+        contributions: [
+            "a localized “Chegg for African students,” tailored to address academic resource gaps in African universities.",
+            "Authored the Product Requirement Document (PRD) and created wireframes to communicate vision and features to the UI/UX and development teams",
+            "Led a cross-functional team of 6, including 2 Frontend Engineers and 2 Backend Engineers, ensuring smooth execution from concept to launch.",
+            "Led the frontend team, guiding the team to build a clean, accessible responsive, and user-friendly interface aligned with project goals."
+        ],
+        url: "https://friconn.netlify.app",
         // badge: "Web Design",
-        tags: ["Web Design", "Portfolio", "Personal"]
-    }
+        tags: ["CodeIgniter", "MYSQL", "React", "Tailwind CSS"]
+    },
 ];
