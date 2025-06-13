@@ -56,11 +56,11 @@ export const projects: Project[] = [
      {
         title: "Portfolio Website",
         description: "I redesigned my portfolio, highlighting my current career outlook. The portfolio was built by modifying an existing astro template, adding sections such as skills, technical documents. Also, I made some adjustments to the user experience by optimizing the visual elements.",
-        image: "/post_img.webp",
+        image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1749769180/Yusuff-Ogundeji-Portfolio-Website-For-Yusuff-Ogundeji_v4lch7.png",
         url: "https://example.com/portfolio",
         // badge: "Web Design",
         tags: ["Web Design", "Portfolio", "Personal"],
-        techStack: ["Astro", "Tailwind CSS", "Vanilla JavaScript"],
+        techStack: ["Astro", "Tailwind CSS", "Vanilla JavaScript", "GraphQL"],
         contributions: [
            "Redesigned and rebuilt my portfolio site to reflect my current career direction, showcasing updated projects, skills, and professional focus.",
            "Customized an existing Astro template, extending it with new sections such as Skills, Technical Documentation, My writings, and a more structured project showcase.",
@@ -84,7 +84,7 @@ export const projects: Project[] = [
         ],
     },
     {
-        title: "Pebblescore(Formerly Pebblescore)",
+        title: "Pebblescore(Formerly Cobble)",
         description:"Cobblescore helps loan providers recover debt by enabling flexible repayment plans for debtors. Its mobile app supports users in boosting their credit scores through structured debt repayment and a credit booster feature.The platform partners with major Nigerian credit bureaus: Credit Registry, CRC, and FirstCentral, to report credit activity and support score recovery.",
          image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1749664585/Pebblescore_tkwagj.png",
         techStack:["React", "React Native", "NodeJS", "Express", "MongoDB", "Typescript", "Tailwind CSS"],

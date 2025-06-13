@@ -3,19 +3,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import PostCard from "../components/PostCard.astro";
 import { getCollection } from "astro:content";
-import { getHashnodePosts } from '../lib/fetchPosts';
+import { getHashnodePosts } from '../lib/fetchPosts.ts';
 const posts = await getHashnodePosts();
 import { projects } from "../data/projects.ts";
 
 // const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const last_posts = posts.slice(0, 3);
-console.log(last_posts, "LATEST POSTS");
 ---
 
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
+<div class="pb-12 mt-5" id="home">
     <div class="text-xl py-1">Hey there 👋</div>
     <div class="text-5xl font-bold">I'm Yusuff Ogundeji</div>
     <div class="text-3xl py-3 font-bold">Software Engineer</div>
@@ -61,7 +60,7 @@ console.log(last_posts, "LATEST POSTS");
     </>
   ))}
   
-  <div>
+  <div id="writings">
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest from blog</div>
   </div>
 
@@ -88,5 +87,51 @@ console.log(last_posts, "LATEST POSTS");
     >
       Read More Articles
     </a>
+  </div>
+  <div id="cv" class="mb-8 mt-32">
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Curriculum Vitae</div>
+    <div class="text-lg mb-5">
+      Interested in my professional journey? You can download my CV to see my skills, experiences, and projects in detail.  
+      </div>
+    <div class="flex justify-center">
+      <a 
+        href="/YusuffOgundeji-CV.pdf" 
+        target="_blank" 
+        class="btn btn-primary"
+        download
+      >
+        Download CV                                                                        
+      </a>
+    </div>
+  </div>
+  <div id="contact" class="mb-20 mt-32">
+    <div class="text-3xl w-full font-bold mb-5 mt-10">Let's Talk</div>
+    <div class="text-lg mb-5">
+      I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out!
+    </div>
+    <div class="bg-base-100 p-6 rounded-lg">
+      <div class="flex flex-col md:flex-row gap-6">
+        <a 
+          href="mailto:ogundeji.yusuff@gmail.com" 
+          class="btn btn-outline btn-primary flex-1"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2">
+            <rect width="20" height="16" x="2" y="4" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+          Send an Email
+        </a>
+        <a 
+          href="https://twitter.com/@_temiogundeji" 
+          target="_blank" 
+          class="btn btn-outline btn-primary flex-1"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2">
+            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+          </svg>
+          DM on Twitter
+        </a>
+      </div>
+    </div>
   </div>
 </BaseLayout>

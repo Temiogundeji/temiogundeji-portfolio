@@ -1,4 +1,26 @@
-export async function getHashnodePosts() {
+interface HashnodePost {
+  title: string;
+  brief: string;
+  slug: string;
+  coverImage: {
+    url: string;
+  } | null;
+  publishedAt: string;
+}
+
+interface HashnodeResponse {
+  data: {
+    publication: {
+      posts: {
+        edges: Array<{
+          node: HashnodePost;
+        }>;
+      };
+    };
+  };
+}
+
+export async function getHashnodePosts(): Promise<HashnodePost[]> {
   const query = `
     query {
       publication(host: "temiogundeji.hashnode.dev") {
@@ -25,6 +47,6 @@ export async function getHashnodePosts() {
     body: JSON.stringify({ query }),
   });
 
-  const json = await res.json();
+  const json = await res.json() as HashnodeResponse;
   return json.data.publication.posts.edges.map((edge) => edge.node);
 }
