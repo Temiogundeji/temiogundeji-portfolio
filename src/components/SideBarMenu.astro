@@ -4,47 +4,59 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
 ---
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
-    <li><a class="py-3 text-base" id="home" href="/#home">Home</a></li>
-    <li><a class="py-3 text-base" id="projects" href="/#projects">Projects</a></li>
-    <li><a class="py-3 text-base" id="services" href="/#writings">Writings</a></li>
-    <li><a class="py-3 text-base" id="cv" href="/#cv">CV</a></li>
+    <li><a class={`py-3 text-base nav-link ${activeClass}`} id="home" href="#home-nav">Home</a></li>
+    <li><a class="py-3 text-base nav-link" id="projects" href="#projects">Projects</a></li>
+    <li><a class="py-3 text-base nav-link" id="writings" href="#writings">Writings</a></li>
+    <li><a class="py-3 text-base nav-link" id="cv" href="#cv">CV</a></li>
     <li>
         <a
-            class="py-3 text-base"
-            href="/#contact"
-            target="_blank"
+            class="py-3 text-base nav-link"
+            id="contact"
+            href="#contact"
             referrerpolicy="no-referrer-when-downgrade">Let's Talk</a
         >
     </li>
 </ul>
 
-<script define:vars={{ sideBarActiveItemID: sideBarActiveItemID, activeClass: activeClass }}>
+<script>
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
     const activeClass = 'bg-base-300';
 
-    // Smooth scroll functionality
+    // Set home as active by default
+    const homeLink = document.querySelector('#home');
+    homeLink?.classList.add(activeClass);
+
+    // Handle click events
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
-        const targetId = link.getAttribute('href').substring(2);
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Remove active class from all links
+        navLinks.forEach(l => l.classList.remove(activeClass));
+        // Add active class to clicked link
+        link.classList.add(activeClass);
+        
+        // Handle smooth scroll
+        const targetId = link.getAttribute('href');
+        if (typeof targetId === 'string' && targetId.startsWith('#')) {
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
         }
       });
     });
 
-    // Active section highlighting
+    // Handle scroll-based highlighting
     function highlightNavigation() {
-      const scrollPosition = window.scrollY + 100; // Offset for better highlighting
+      const scrollPosition = window.scrollY + 100;
 
       sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
+        const sectionTop = (section as HTMLElement).offsetTop;
+        const sectionHeight = (section as HTMLElement).offsetHeight;
         const sectionId = section.getAttribute('id');
-        const correspondingLink = document.querySelector(`.nav-link[href="/#${sectionId}"]`);
+        const correspondingLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
 
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           navLinks.forEach(link => link.classList.remove(activeClass));
@@ -53,10 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Initial highlight
-    highlightNavigation();
-
     // Update highlight on scroll
     window.addEventListener('scroll', highlightNavigation);
-  });
-</script>                                                                                                               
+});
+</script>

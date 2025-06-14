@@ -14,7 +14,7 @@ const last_posts = posts.slice(0, 3);
 
 
 <BaseLayout sideBarActiveItemID="home">
-<div class="pb-12 mt-5" id="home">
+<div class="pb-12 mt-5" id="home-nav">
     <div class="text-xl py-1">Hey there 👋</div>
     <div class="text-5xl font-bold">I'm Yusuff Ogundeji</div>
     <div class="text-3xl py-3 font-bold">Software Engineer</div>
@@ -32,9 +32,9 @@ const last_posts = posts.slice(0, 3);
       <span class="badge badge-success p-4">Next.js</span>
       <span class="badge badge-warning p-4">GraphQL</span>
       <span class="badge badge-error p-4">CSS</span>
-      <span class="badge badge-primary p-4">Python</span>
+      <!-- <span class="badge badge-primary p-4">Python</span> -->
       <span class="badge badge-info p-4">Docker</span>
-      <span class="badge badge-secondary p-4">Kubernetes</span>
+      <!-- <span class="badge badge-secondary p-4">Kubernetes</span> -->
       <span class="badge badge-accent p-4">CI/CD</span>
     </div>
     </div>
@@ -42,7 +42,7 @@ const last_posts = posts.slice(0, 3);
       <a class="btn" href="https://twitter.com/@_temiogundeji" target="_blank"> Let's connect!</a>
     </div>
   </div>
-  <div>
+  <div id="projects">
     <div class="text-3xl w-full font-bold mb-2">Featured Projects </div>
   </div>
   {projects.map((project, index) => (
@@ -91,16 +91,16 @@ const last_posts = posts.slice(0, 3);
   <div id="cv" class="mb-8 mt-32">
     <div class="text-3xl w-full font-bold mb-5 mt-10">Curriculum Vitae</div>
     <div class="text-lg mb-5">
-      Interested in my professional journey? You can download my CV to see my skills, experiences, and projects in detail.  
+      Interested in my professional journey? You can download my Resume to see my skills, experiences, and projects in detail.  
       </div>
     <div class="flex justify-center">
       <a 
-        href="/YusuffOgundeji-CV.pdf" 
+        href="https://drive.google.com/file/d/1OApNgmqYaSq4SIaPiP4cibyk403yv0to/view?usp=drive_linkhttps://docs.google.com/document/d/e/2PACX-1vS3CyyWtDXlW-ftCMyCp7MK7glRpcHx4klsbH2fZ1JY4G9KJFWPXgMKYhydVTnjJHxK3oUdVf6jbH-l/pub" 
         target="_blank" 
         class="btn btn-primary"
         download
       >
-        Download CV                                                                        
+        Download Resume                                                                        
       </a>
     </div>
   </div>
@@ -112,7 +112,7 @@ const last_posts = posts.slice(0, 3);
     <div class="bg-base-100 p-6 rounded-lg">
       <div class="flex flex-col md:flex-row gap-6">
         <a 
-          href="mailto:ogundeji.yusuff@gmail.com" 
+          href="mailto:yusuffogundeji@gmail.com" 
           class="btn btn-outline btn-primary flex-1"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2">
