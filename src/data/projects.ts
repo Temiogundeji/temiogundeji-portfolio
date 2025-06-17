@@ -68,21 +68,21 @@ export const projects: Project[] = [
            "Improved performance and responsiveness, ensuring fast load times and smooth navigation while maintaining a modern and polished aesthetic."
         ]
     },
-     {
-        title: "Tasky - Open Source Task Management and Productivity Tool",
-        description: "Tasky is an open-source, cross-platform task management and productivity solution designed to help individuals and teams plan, track, and complete their tasks with clarity and efficiency. Having tried so many productivity tools, no single one of those tools has all the features I require for my day-to-day work. For this reason, I'\m building Tasky to bring together important features of various productivity tools. It would be built with a strong focus on usability and data-driven decision-making.",
-       image: "/post_img.webp",
-        url: "https://example.com/portfolio",
-        // badge: "Web Design",
-        techStack: ["Vue JS", "Electron", "Tailwind CSS", "Typescript", "NodeJS", "Supabase", "Prisma"],
-        contributions: [
-            "Setup Frontend and Backend repository on GitHub and managed the project roadmap with GitHub Project.",
-            "Prepared Architectural design document",
-            "Prepared Project requirement document",
-            "Prepared Technical decision document",
-            "Set up the frontend and backend repository on GitHub and managed the project roadmap with GitHub Project. "
-        ],
-    },
+    //  {
+    //     title: "Tasky - Open Source Task Management and Productivity Tool",
+    //     description: "Tasky is an open-source, cross-platform task management and productivity solution designed to help individuals and teams plan, track, and complete their tasks with clarity and efficiency. Having tried so many productivity tools, no single one of those tools has all the features I require for my day-to-day work. For this reason, I'\m building Tasky to bring together important features of various productivity tools. It would be built with a strong focus on usability and data-driven decision-making.",
+    //    image: "/post_img.webp",
+    //     url: "https://example.com/portfolio",
+    //     // badge: "Web Design",
+    //     techStack: ["Vue JS", "Electron", "Tailwind CSS", "Typescript", "NodeJS", "Supabase", "Prisma"],
+    //     contributions: [
+    //         "Setup Frontend and Backend repository on GitHub and managed the project roadmap with GitHub Project.",
+    //         "Prepared Architectural design document",
+    //         "Prepared Project requirement document",
+    //         "Prepared Technical decision document",
+    //         "Set up the frontend and backend repository on GitHub and managed the project roadmap with GitHub Project. "
+    //     ],
+    // },
     {
         title: "Pebblescore(Formerly Cobble)",
         description:"Cobblescore helps loan providers recover debt by enabling flexible repayment plans for debtors. Its mobile app supports users in boosting their credit scores through structured debt repayment and a credit booster feature.The platform partners with major Nigerian credit bureaus: Credit Registry, CRC, and FirstCentral, to report credit activity and support score recovery.",
