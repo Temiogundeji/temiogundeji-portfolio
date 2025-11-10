@@ -14,29 +14,29 @@ export const projects: Project[] = [
         title: "Digital Marketplace for African Artisans",
         description: "Oosri is a digital marketplace designed to connect skilled African artisans, starting with Nigeria, to global buyers. Our platform breaks down the traditional barriers that have long kept local craftspeople, designers, and micro-entrepreneurs from accessing international markets. Through Oosri, artisans can showcase their unique, handcrafted products directly to global customers, while we handle the logistics, payments, quality assurance, and cross-border trade complexities. ",
         image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1749662949/Oosri-website_seax8a.png",
-        url: "https://orrsi.vercel.app/",
-        techStack: ["React", "Next.JS", "Laravel", "React JS", "TypeScript", "Styled Components"],
+        url: "https://oosri.com/",
+        techStack: ["React", "Next.JS", "Express", "React JS", "TypeScript", "Styled Components"],
         contributions: [
-      "Contributed to admin dashboard that allowed internal teams to manage products, track orders, and monitor platform activities seamlessly.",
-      "Translated Figma designs into pixel-perfect, responsive UI components, maintaining visual accuracy and a consistent user experience across devices and screen sizes.",
-      "Refactored and restructured the frontend codebase, improving modularity, readability, and maintainability, which accelerated future development and debugging.",
-      "Optimized key areas of the frontend logic, resulting in a 70% boost in performance and responsiveness, contributing to a noticeably faster and smoother admin experience.",
-      "Built reusable components and hooks to make data fetching and state management more efficient and developer-friendly.",
-      "Collaborated with designers and backend developers, ensuring seamless alignment between frontend behaviour, backend endpoints, and user expectations."
-    ],
-    },
-    {
-        title: "IleyaFest Event Platform",
-        description: "A platform to enable people register for the IleyaFest event. They can register for the event, make a payment and generate a ticket for the event.  Prior to the implementation of this project IleyaFest was conducted by ensuring people transfer money directly into the indivdual account.",
-        image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1749663293/ileyafest_cfngow.png",
-        url: "#",
-        techStack: ["Next JS", "Prisma", "Supabase", "Paystack API", "React Query","React Hook Form"],
-        contributions:["Initiated and led the development of the IleyaFest event website, taking the project from concept to launch by outlining goals, features, and user flows for a seamless attendee experience.",
-            "Designed and developed the landing page, creating an engaging, responsive interface that effectively showcased the event\'s highlights, speakers, and activities.",
-            "Built a complete user registration system, with input validation, user feedback, and seamless integration into the overall site design.",
-            "Integrated a secure payment system (i.e, Paystack), enabling smooth, real-time transactions for event ticket purchases."
+            "Contributed to admin dashboard that allowed internal teams to manage products, track orders, and monitor platform activities seamlessly.",
+            "Translated Figma designs into pixel-perfect, responsive UI components, maintaining visual accuracy and a consistent user experience across devices and screen sizes.",
+            "Refactored and restructured the frontend codebase, improving modularity, readability, and maintainability, which accelerated future development and debugging.",
+            "Optimized key areas of the frontend logic, resulting in a 70% boost in performance and responsiveness, contributing to a noticeably faster and smoother admin experience.",
+            "Built reusable components and hooks to make data fetching and state management more efficient and developer-friendly.",
+            "Collaborated with designers and backend developers, ensuring seamless alignment between frontend behaviour, backend endpoints, and user expectations."
         ],
     },
+    // {
+    //     title: "IleyaFest Event Platform",
+    //     description: "A platform to enable people register for the IleyaFest event. They can register for the event, make a payment and generate a ticket for the event.  Prior to the implementation of this project IleyaFest was conducted by ensuring people transfer money directly into the indivdual account.",
+    //     image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1749663293/ileyafest_cfngow.png",
+    //     url: "#",
+    //     techStack: ["Next JS", "Prisma", "Supabase", "Paystack API", "React Query","React Hook Form"],
+    //     contributions:["Initiated and led the development of the IleyaFest event website, taking the project from concept to launch by outlining goals, features, and user flows for a seamless attendee experience.",
+    //         "Designed and developed the landing page, creating an engaging, responsive interface that effectively showcased the event\'s highlights, speakers, and activities.",
+    //         "Built a complete user registration system, with input validation, user feedback, and seamless integration into the overall site design.",
+    //         "Integrated a secure payment system (i.e, Paystack), enabling smooth, real-time transactions for event ticket purchases."
+    //     ],
+    // },
     {
         title: "Kicest E-commerce Platform",
         description: "Kicest is an all-in-one e-commerce platform designed to help businesses of all sizes build, manage, and grow their online presence. With our platform, you can launch a customizable, mobile-friendly e-commerce website in minutes and seamlessly integrate social media to reach wider audiences, receive instant payments for orders into your local bank account, automate inventory management, order tracking, and shipping logistics.",
@@ -46,14 +46,47 @@ export const projects: Project[] = [
         tags: ["Web Design", "Portfolio", "Personal"],
         techStack: ["Tailwind CSS", "NodeJS", "Typescript", "Next JS", "Go"],
         contributions: [
-           "Contributed to the early conceptualization of the vendor dashboard, collaborating with the product and UI/UX teams to define core functionalities and translate abstract ideas into clear, design-ready concepts",
-           "Participated in key technical decision-making, helping shape the architecture, tooling, and frontend strategy for the vendor platform to ensure scalability and maintainability",
-           "Collaborated with fellow software engineers to develop core dashboard features, including the implementation of the “Add Product” functionality and logic for assigning categories to products.",
-           "Built an intuitive drag-and-drop image upload feature, improving the vendor experience by simplifying the product image submission process.",
-           "Developed a dynamic pricing page, allowing vendors to set flexible pricing structures and update them in real-time, enhancing product listing efficiency."
+            "Contributed to the early conceptualization of the vendor dashboard, collaborating with the product and UI/UX teams to define core functionalities and translate abstract ideas into clear, design-ready concepts",
+            "Participated in key technical decision-making, helping shape the architecture, tooling, and frontend strategy for the vendor platform to ensure scalability and maintainability",
+            "Collaborated with fellow software engineers to develop core dashboard features, including the implementation of the “Add Product” functionality and logic for assigning categories to products.",
+            "Built an intuitive drag-and-drop image upload feature, improving the vendor experience by simplifying the product image submission process.",
+            "Developed a dynamic pricing page, allowing vendors to set flexible pricing structures and update them in real-time, enhancing product listing efficiency."
         ]
     },
-     {
+    {
+        title: "Servanda Platform",
+        description: "Servanda is a platform that connects skilled and ethically sound artisans with verified clients. It empowers artisans to showcase their craftsmanship while ensuring clients access reliable, trustworthy, and verified professionals for their projects. The platform streamlines the process of discovering, hiring, and managing skilled workers through a secure and efficient system designed for transparency and accountability.",
+        image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1762786827/Screenshot_from_2025-11-10_09-27-19_br5ln3.png",
+        url: "Work in progress",
+        tags: ["Web App", "Job Matching", "Marketplace"],
+        techStack: ["Next.js", "React Query", "Tailwind CSS", "TypeScript", "Node.js", "Express", "Postgres", "Prisma"],
+        contributions: [
+            "Spearheaded the development of the MVP connecting skilled workers to clients, enabling a seamless matchmaking process.",
+            "Built a robust authentication system and integrated BullMQ for handling background jobs efficiently.",
+            "Led the migration of the product codebase to TypeScript, improving developer productivity, reducing runtime errors, and ensuring long-term scalability.",
+            "Developed a multi-role user authentication system with appropriate access guards for both artisans and clients.",
+            "Designed the system architecture, authored technical documentation, and implemented a deployment pipeline for reliable and scalable releases.",
+            "Set up CI/CD workflows, reducing release cycle time by 60% and establishing a continuous delivery-ready environment."
+        ]
+    },
+    {
+        title: "Simlearn AI Learning Platform",
+        description: "Simlearn is an AI-powered learning platform that allows learners to explore and master any topic interactively—like Duolingo, but for all subjects. By leveraging AI-driven content generation, adaptive learning paths, and gamified learning experiences, Simlearn personalizes education for every learner and helps users stay engaged and motivated throughout their learning journey.",
+        image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1762788641/Lesson_Overiew_nyzsqp.png",
+        url: "Work in progress",
+        tags: ["AI", "E-Learning", "Gamification"],
+        techStack: ["React", "Vite", "TypeScript", "React Query", "Context API", "Tailwind CSS", "Node.js", "Express", "Postgres", "Prisma"],
+        contributions: [
+            "Designed the overall system architecture and documented the full project requirements.",
+            "Implemented a robust state management system to ensure predictable and scalable app performance.",
+            "Designed the landing page for the platform, aligning with the product’s user experience goals.",
+            "Integrated OpenAI API to enable dynamic lesson generation tailored to user preferences.",
+            "Developed a feature to progressively fetch lesson stages for improved performance and seamless user experience.",
+            "Implemented backend services for content generation, user management, and learning progression tracking.",
+            "Developed a comprehensive gamification service, incorporating Streak tracking, Experience Point (XP) allocation, Level management, and Leaderboard to enhance learner engagement and retention."
+        ]
+    },
+    {
         title: "Portfolio Website",
         description: "I redesigned my portfolio, highlighting my current career outlook. The portfolio was built by modifying an existing astro template, adding sections such as skills, technical documents. Also, I made some adjustments to the user experience by optimizing the visual elements.",
         image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1749769180/Yusuff-Ogundeji-Portfolio-Website-For-Yusuff-Ogundeji_v4lch7.png",
@@ -62,10 +95,10 @@ export const projects: Project[] = [
         tags: ["Web Design", "Portfolio", "Personal"],
         techStack: ["Astro", "Tailwind CSS", "Vanilla JavaScript", "GraphQL"],
         contributions: [
-           "Redesigned and rebuilt my portfolio site to reflect my current career direction, showcasing updated projects, skills, and professional focus.",
-           "Customized an existing Astro template, extending it with new sections such as Skills, Technical Documentation, My writings, and a more structured project showcase.",
-           "Enhanced the user experience by optimizing visual hierarchy, spacing, and interactivity, resulting in a cleaner, more intuitive interface across devices.",
-           "Improved performance and responsiveness, ensuring fast load times and smooth navigation while maintaining a modern and polished aesthetic."
+            "Redesigned and rebuilt my portfolio site to reflect my current career direction, showcasing updated projects, skills, and professional focus.",
+            "Customized an existing Astro template, extending it with new sections such as Skills, Technical Documentation, My writings, and a more structured project showcase.",
+            "Enhanced the user experience by optimizing visual hierarchy, spacing, and interactivity, resulting in a cleaner, more intuitive interface across devices.",
+            "Improved performance and responsiveness, ensuring fast load times and smooth navigation while maintaining a modern and polished aesthetic."
         ]
     },
     //  {
@@ -85,9 +118,9 @@ export const projects: Project[] = [
     // },
     {
         title: "Pebblescore(Formerly Cobble)",
-        description:"Cobblescore helps loan providers recover debt by enabling flexible repayment plans for debtors. Its mobile app supports users in boosting their credit scores through structured debt repayment and a credit booster feature.The platform partners with major Nigerian credit bureaus: Credit Registry, CRC, and FirstCentral, to report credit activity and support score recovery.",
-         image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1749664585/Pebblescore_tkwagj.png",
-        techStack:["React", "React Native", "NodeJS", "Express", "MongoDB", "Typescript", "Tailwind CSS"],
+        description: "Cobblescore helps loan providers recover debt by enabling flexible repayment plans for debtors. Its mobile app supports users in boosting their credit scores through structured debt repayment and a credit booster feature.The platform partners with major Nigerian credit bureaus: Credit Registry, CRC, and FirstCentral, to report credit activity and support score recovery.",
+        image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1749664585/Pebblescore_tkwagj.png",
+        techStack: ["React", "React Native", "NodeJS", "Express", "MongoDB", "Typescript", "Tailwind CSS"],
         contributions: [
             "Built the Frontend of the debtor's portal that allows over 1000+ debtors to pay back their debts with various lenders through a platform.",
             "Built a feature  to allow lenders to invite their debtors.",
