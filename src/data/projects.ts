@@ -56,7 +56,7 @@ export const projects: Project[] = [
     {
         title: "Servanda Platform",
         description: "Servanda is a platform that connects skilled and ethically sound artisans with verified clients. It empowers artisans to showcase their craftsmanship while ensuring clients access reliable, trustworthy, and verified professionals for their projects. The platform streamlines the process of discovering, hiring, and managing skilled workers through a secure and efficient system designed for transparency and accountability.",
-        image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1762786827/Screenshot_from_2025-11-10_09-27-19_br5ln3.png",
+        image: "https://res.cloudinary.com/dj1lgzojo/image/upload/v1763374526/Landing_page_gvrnxs.png",
         url: "Work in progress",
         tags: ["Web App", "Job Matching", "Marketplace"],
         techStack: ["Next.js", "React Query", "Tailwind CSS", "TypeScript", "Node.js", "Express", "Postgres", "Prisma"],
